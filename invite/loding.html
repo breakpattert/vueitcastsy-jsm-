@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="stylesheet" href="./style/base.css">
+<!--   swiper -->
+
+
+
+  <title>恋爱loding</title>
+  
+<style>
+
+.box{width:100%; height:300px; margin:30px auto; }
+
+.ok{width:100%; height:100px; margin:0 auto; text-align:center; background:#999; line-height:100px; color:#FFF; display:none; }
+
+.tbox{width:100%; height:49px;     
+    border-radius: 12px;
+    height: 27px;
+    background: #a09d9d;
+    margin-top:20px;
+  }
+
+.tbox div{width:0px; height:27px;text-align:center;background: rgba(59, 55, 55, 0.51);border-radius: 12px;
+
+font-family:Tahoma; font-size:18px; line-height:48px;}
+
+</style>
+</head>
+
+<body id="vue">
+    <div class="box">
+
+    <div class="ok"></div>
+
+    <div class="tbox">
+
+        <div class="tiao"></div>
+
+    </div>
+
+</div>
+</body>
+ <script src="./script/lib/jquery-3.2.1.min.js"></script>
+ <script src="script/lib/vue.min.js"></script>
+ 
+
+<!--   分屏引入的js -->
+
+  
+<script src="./script/lib/ajax.js"></script> 
+
+ <script>
+
+      // new Vue({
+      //     el:"#vue",
+      //     data:{
+      //         i:'',
+      //       code:'',
+      //       user_token:'',
+      //     },
+      //     created:function(){
+        
+   
+      
+      //   function xh(){
+           
+      //     if(i>100){
+
+      //     $(".ok").html("加载完成").fadeIn("slow");
+      //       return;
+      //   }
+      //     if(i<=100){
+      //     setTimeout("xh()",100)
+      //     add(i);
+      //       i++;
+      //   }
+      // }
+      //     },
+      //     methods:{
+      //         add:function (i){
+      //              var i = this.i;
+
+      //         var tbox =$(".tbox");
+      //          var tiao =$(".tiao");
+      //          tiao.css("width",i+"%").html(i+"%");
+
+      //       }
+
+
+      //     }
+
+        
+      // });
+      var i=0;
+    /*add——创建tbx下的div加文字和变宽度的方法*/
+    function add(i){
+        var tbox =$(".tbox");
+        var tiao =$(".tiao");
+        var s = 10;
+      tiao.css("width",i+"%");
+      // .html(i+"%")
+
+    }
+
+
+
+    /*创建方法（i++循环起来）*/
+
+  function xh(){
+
+    if(i>100){
+
+      // $(".ok").html("加载完成").fadeIn("slow");
+      window.location.href= "./invite.html"
+      return;
+      }
+    if(i<=100){
+      setTimeout("xh()",20)
+      add(i);
+        i++;
+      }
+    }
+    /*调用xh()函数*/
+$(document).ready(function(){ 
+    xh();
+  });
+  </script> 
+<!-- http://cf.matepay.cc/pages/viewpage.action?pageId=1015966 邀请码 -->
+</html>

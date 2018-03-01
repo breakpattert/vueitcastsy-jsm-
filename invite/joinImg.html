@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="stylesheet" href="./style/base.css">
+    <title>参赛证</title>
+    <style type="text/css">
+    body{
+      background:#000;
+      font-size: 14px;
+    }
+    .mains{
+          overflow: hidden;
+      width:100%;
+      height: 100%;
+      position: relative;
+  
+/*  border: 1px solid #394740;*/
+
+/*      background-position: 100% 100%;*/
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .mains>img{
+    width:100%;
+
+    }
+    .main_p{
+      position: absolute;
+      left:0;
+      bottom:0;
+      right:0;
+    }
+    .main_p>img{
+      width:100%;
+      height: 100%;
+    }
+    .main_r{
+    right: 0;
+    top: 0;
+    position: absolute;
+    }
+    .main_ridio{
+    height: 6.64rem;
+    position: absolute;
+    width: 7.585rem;
+    right: 1rem;
+    top: 3rem;
+    }
+    .main_ridio>img{
+          height: 100%;
+      width:100%;
+    }
+    .avatar-btns button {
+      height: 35px;
+    }
+    .header{
+    position: absolute;
+    top: 1.15rem;
+    left:1rem;
+    z-index: 3;
+    }
+    .header>img{
+      width:100%;
+
+    }
+
+    .btn-primary{
+      width:100%;
+      height: 100%;
+      border-radius: 16px;
+        background-image: url(images/uo_poin.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+       
+       position: relative;
+    }
+     .btn-primary:hover{
+      background: #ccc;
+     }
+    .b_banner{
+        width: 100%;
+    height: 73%;
+    background-size: cover;
+    background-position: center;
+  /*  background-image:url(images/uo_poin.png);*/
+    border-radius: 1.1rem;
+    }
+    .b_banner>img{
+      width:100%;
+      border-radius: 1rem;
+          height: 100%;
+    }
+    .banner_m{
+
+      width:100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+/*    .banner_m>img{
+      width:100%;
+      border-radius: 1rem;
+    }*/
+
+
+    .avatar-btns {
+
+    text-align: center;
+    }
+    .avatar-btns button{
+      width:100px;
+    }
+
+    .loding{
+      top: 9rem;
+      height: 52%;
+          border-radius: 1.1rem;
+    background:#fff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 1.1rem;
+    width: 76%;
+    }
+    .loding .btn-primary{
+          background-position: center;
+    height: 56%;  
+
+    }
+.point_c{
+  position: absolute;
+  bottom:0;
+  height: 6.43rem;
+  width:62%;
+    bottom: 5rem;
+    /* height: 8.43rem; */
+     height: 3.23rem;
+    width: 80%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 12%;
+    text-align: center;
+}
+
+.point_c>p{
+  font-size: 0.68rem;
+  margin-top: 0.5rem;
+  color:#fff;
+
+
+}
+
+    .h_point{
+    border-radius: 5rem;
+    color: #fff;
+    position: relative;
+    font-size: 1.5rem;
+    height: 100%;
+
+
+    }
+
+     .h_point .b_01{
+        float: left;
+        width: 6.8rem;
+        height: 2.81rem;
+        border-radius: 2.81rem;
+        outline:none;
+        margin-left: 5%;
+        background:#E25A41;
+        border:0;
+        font-size: 0.94rem;
+        color:#fff;
+        font-weight: 700
+
+     }
+     .h_point .b_02{
+         margin-right: 5%;
+        border-radius: 2.81rem;
+        height: 2.81rem;
+        width: 6.8rem;
+        float: right;
+        outline:none;
+        background: #5538EE;
+        border:0;
+        font-size: 0.94rem;
+        color:#fff;
+        font-weight: 700
+
+   
+     }
+
+     .h_point>p{
+     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.1rem;
+       line-height: 3.23rem;
+     }
+     .detil_ts{
+  width:100%;
+/*  padding:0.75rem;*/
+/*  line-height: 1.75rem;*/
+  font-size: 0.85rem;
+  color:#09062D;
+}
+.detil_ts>i{
+  color:#8CE3D3;
+  font-size: 1.5rem;
+  position: relative;
+  top: 0.3rem;
+}
+    </style>
+  </head>
+
+  <body>
+  <div class="mains" id="vue">
+
+  <img src="./images/join_img.png" alt="">
+    <div class="header">
+        <img src="images/title_1.png">
+    </div>
+    <div class="main_p">
+      <img src="./images/main_p.png">
+    </div>
+      <!-- 结束定位 -->
+<div class="main_r">
+<img src="images/main_r.png" height="211" width="186" alt="">
+  
+</div>
+<div class="main_ridio">
+  <img src="images/main_ridio.png" height="198" width="234" alt="">
+</div> 
+
+<div class="loding">
+        <div class="b_banner">
+            <img v-bind:src="imgurl" alt="">
+        </div>
+        <div class="detil_b">
+            <div class="detil_ts">
+              TA们在恋爱宝实现了<i>{{wish_count}}</i>个愿望</br>
+
+            超过了 <i>{{beyond_percent}}%</i>的用户
+            </div>
+        </div>
+</div>
+  <div class="point_c">
+    <div class="h_point">
+
+      <button class="b_01" v-on:click="poinImg()">
+        重选图片
+      </button>
+     <button class="b_02" onclick="share()">
+       分享图片
+     </button>
+
+
+    </div>
+    <p>邀请朋友扫描图片二维码即可为你点击助力</p>
+  
+  </div> 
+</div>
+</body>
+  <script src="./script/lib/jquery-3.2.1.min.js"></script>
+ <script src="script/lib/vue.min.js"></script>
+ <script src="./script/lib/ajax.js"></script> 
+ <script>
+   var storage=window.localStorage;
+    var userobj=JSON.parse(localStorage.getItem('user'));
+
+   var url = "http://matepay-oss-bucket.oss-cn-hangzhou.aliyuncs.com/test/matepay/activity_server/2018-02-09/151811412888300000001827.png";   
+    function share(url) { 
+    var url = "http://matepay-oss-bucket.oss-cn-hangzhou.aliyuncs.com/test/matepay/activity_server/2018-02-09/151811412888300000001827.png";   
+    var u = navigator.userAgent, app = navigator.appVersion;
+     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            
+      if(isAndroid){
+           android.share(url);
+          return true;
+        }if(isIOS){ 
+        window.webkit.messageHandlers.share.postMessage(url);   
+            return true;
+          }
+        }
+ </script>
+<script>
+    new Vue({
+        el:"#vue",
+        data:{
+            s:'222',
+            imgurl:'',
+            suid:'',
+            list:null,
+            muid:'',
+            key_sentence_id:'',
+            wish_count:'22',
+            origin_img_url:'',
+            beyond_percent:'22',
+            
+          },
+        created:function(){
+           var storage=window.localStorage;
+           var userobj=JSON.parse(localStorage.getItem('user'));
+           this.imgurl=userobj;
+//         获取上个页面的suid
+					function queryParam(name) {
+　　　　        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+　　　　        var r = window.location.search.substr(1).match(reg);
+　　　　        if(r != null) return unescape(r[2]);
+　　　　        return null;
+　　　　      };
+           this.suid = queryParam("suid"); 
+           this.getlist();
+      },
+          
+
+        methods:{
+          poinImg:function(){
+              window.location.href="./lodpul.html?suid="+ this.suid;
+          },
+        getlist: function() {
+      var that = this;
+      $.ajax({
+        url: 'http://api-test.matepay.cc' + '/activity/spring/photo_page/get',
+        dataType: 'json',
+        data: {
+    			suid:that.suid,
+   
+        },
+        success: function(data) {
+          if (data.code == 10000) {
+          	      console.log(data);
+          	   that.list = data.data.spring_activity_mate_d_t_o;
+          	   that.muid = that.list.muid;
+//        	   关键字
+          	   that.key_sentence_id = that.list.key_sentence_id;
+//        	   实现愿望个数
+          	   that.wish_count =  that.list.wish_count;
+//        	   原图
+          	   that.origin_img_url =  that.list.origin_img_url;
+//        	   超过用户比例
+          	   that.beyond_percent =  that.list.beyond_percent;
+      
+          }
+        }
+      })
+    },
+    setImage:function(){
+    	var that = this;
+      $.ajax({
+        url: 'http://api-test.matepay.cc' + '/activity/spring/photo/generate',
+        dataType: 'json',
+        data: {
+//      	muid:that.muid,
+					muid:that.muid,
+        	origin_img_url:that.imgurl,
+        	
+        },
+        success: function(data) {
+          if (data.code == 10000) {
+          	console.log(data);
+          }else{
+          	console.log(data.msg);
+          }
+        }
+      })
+    	
+    	
+    }
+
+      }
+
+        
+  });
+</script>
+<script>
+
+</script>
+
+
+</html>

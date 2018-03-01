@@ -1,0 +1,128 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="stylesheet" href="./style/base.css">
+<!--   swiper -->
+  <link rel="stylesheet" href="./style/vender/swiper.min.css">
+  <link rel="stylesheet" href="./style/index.css">
+
+  <title>恋爱宝</title>
+</head>
+
+<body id="vue">
+  <div class="swiper-container" id="Jswiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="page page-1" style="background:#f37192;">
+        
+        </div> 
+        </div>
+  
+      <div class="swiper-slide" style="background:#000;">
+        <div class="page page-2">
+    
+       </div>
+      </div>
+      <div class="swiper-slide" style="background:#00023;">
+        <div class="page page-3">
+    
+       </div>
+      </div>
+      <div class="swiper-slide" style="background:#f37;">
+        <div class="page page-4">
+    
+       </div>
+      </div>
+        <div class="swiper-slide" style="background:#f37356;">
+        <div class="page page-5">
+    
+       </div>
+      </div>
+    </div>
+    </div>
+    <div class="swiper-arrow">
+      <span></span>
+    </div>
+
+
+  <div class="poplayer"></div>
+</body>
+ <script src="./script/lib/jquery-3.2.1.min.js"></script>
+ <script src="script/lib/vue.min.js"></script>
+ 
+  <script src="script/lib/clipboard.min.js"></script>
+<!--   分屏引入的js -->
+  <script src="script/index.js"></script>
+  
+  <script src="./script/lib/ajax.js"></script> 
+   <script src="./script/lib/swiper.min.js"></script>
+ <script>
+
+      new Vue({
+          el:"#vue",
+          data:{
+						suid:'',
+            code:'',
+            user_token:'',
+          },
+          created:function(){
+            // this.GetQueryString(user_token);
+          function queryParam(name) {
+　　　　        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+　　　　        var r = window.location.search.substr(1).match(reg);
+　　　　        if(r != null) return unescape(r[2]);
+　　　　        return null;
+　　　　      };
+     
+
+     var slicwuid = queryParam("suid");
+
+             
+            
+           
+
+          
+          },
+          methods:{
+             getCode:function(){
+                 var that=this;
+               $.ajax({
+               // url:"http://admin-test.matepay.cc"+"/admin/homepage/banner/list",
+               // api.matepay.cc 
+            
+               url:"http://api.matepay.cc"+"/mate/invite_code/get",
+               dataType: 'json',
+               type:"POST",
+               data:{
+                user_token:that.user_token,
+               },
+               success:function(data){
+                 // console.log(data.data.invite_code);
+                  if(data.code == "10000"){
+                    
+                    that.code=(data.data.invite_code);
+                   }else{
+                  // alert('操作失败');
+                    
+                      setTimeout(function(){
+                        that.showMsg('邀请页面已失效，请邀请方重新发起','center');
+                      },1000);
+                  
+                   }
+              
+               }
+             })
+           },
+
+
+        }
+      });
+  </script> 
+<!-- http://cf.matepay.cc/pages/viewpage.action?pageId=1015966 邀请码 -->
+</html>
